@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!--
+Name: Caleb Walker
+Date Created: 12/4/18
+Most recent revision:
+-->
+
+<html lang="en">
+    <head>
+        <title>Lucky Sevens!</title>
+        
+        <script type="text/Javascript" src="scripts/luckySevens.js"></script>
+        
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet" type="text/css" />
+    </head>
+    
+    <body>
+        <div class="container" style="text-align: center">
+            <h1 style="margin: 20px">Lucky Sevens</h1>
+            
+<!--Lucky Sevens intial starting bet form -->
+            
+            <form name="luckySevenForm" onsubmit="return playGame();" class="form-inline">
+                <div class="form-group">
+                    <label for="startingMoney">Starting Bet:  </label>
+                    <input type="number" class="form-control" id="startingMoney">
+                </div>
+                <div class="row" style="margin: 20px">
+                    <button type="submit" id="submitButton" class="btn btn-default">Play</button>
+                </div>
+            </form>
+            
+<!--End game stats table-->          
+            <hr />
+            <h1 id="resultsHeader" style="display:none">Results</h1>
+            <div style="display: inline-block">
+                <table id="results" class="table table-striped" style="display:none; text-align: left">
+                    <tbody>
+                        <tr>
+                            <td>Starting Bet</td>
+                            <td><span id="startingBetDisplay"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Total Rolls Before going Broke</td>
+                            <td><span id="totalRollsDisplay"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Amount Won</td>
+                            <td><span id="highestAmountDisplay"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Roll Count at Highest Amount Won</td>
+                            <td><span id="rollCountDisplay"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
