@@ -99,9 +99,9 @@ function playGame(){
     
     document.getElementById("resultsHeader").style.display = "block";
     document.getElementById("results").style.display = "block";
-    document.getElementById("startingBetDisplay").innerText = startingMoney;
+    document.getElementById("startingBetDisplay").innerText = "$" + Math.round(startingMoney * 100) / 100;
     document.getElementById("totalRollsDisplay").innerText = totalRolls;
-    document.getElementById("highestAmountDisplay").innerText = highestAmount;
+    document.getElementById("highestAmountDisplay").innerText = "$" + Math.round(highestAmount * 100) / 100;
     document.getElementById("rollCountDisplay").innerText = rollCountAtHighest;
     
     return false;
