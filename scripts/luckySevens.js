@@ -61,7 +61,7 @@ function playGame(){
     startingMoney = Number(document.forms["luckySevenForm"]["startingMoney"].value)
     
     //if the input value is not a number greater than zero, the player is alerted and the game will not start
-    if(startingMoney == "" || isNaN(startingMoney)){
+    if(startingMoney == "" || isNaN(startingMoney) || startingMoney <= 0){
         alert("Starting Bet must be filled in with a positive number.");
         document.forms["luckySevenForm"]["startingMoney"].focus();
         return false;
